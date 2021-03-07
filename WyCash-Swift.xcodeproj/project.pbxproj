@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4959565F25F594C700D68632 /* WyCash_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959565525F594C600D68632 /* WyCash_Swift.framework */; };
-		4959566425F594C700D68632 /* WyCash_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4959566325F594C700D68632 /* WyCash_SwiftTests.swift */; };
 		4959566625F594C700D68632 /* WyCash_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4959565825F594C600D68632 /* WyCash_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4959567125F5995D00D68632 /* WyCashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4959567025F5995D00D68632 /* WyCashTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +27,9 @@
 		4959565825F594C600D68632 /* WyCash_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WyCash_Swift.h; sourceTree = "<group>"; };
 		4959565925F594C600D68632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4959565E25F594C700D68632 /* WyCash-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WyCash-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4959566325F594C700D68632 /* WyCash_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WyCash_SwiftTests.swift; sourceTree = "<group>"; };
 		4959566525F594C700D68632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4959566F25F5995D00D68632 /* WyCash-SwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WyCash-SwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4959567025F5995D00D68632 /* WyCashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WyCashTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +81,9 @@
 		4959566225F594C700D68632 /* WyCash-SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				4959566325F594C700D68632 /* WyCash_SwiftTests.swift */,
 				4959566525F594C700D68632 /* Info.plist */,
+				4959567025F5995D00D68632 /* WyCashTests.swift */,
+				4959566F25F5995D00D68632 /* WyCash-SwiftTests-Bridging-Header.h */,
 			);
 			path = "WyCash-SwiftTests";
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 					};
 					4959565D25F594C700D68632 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -201,7 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4959566425F594C700D68632 /* WyCash_SwiftTests.swift in Sources */,
+				4959567125F5995D00D68632 /* WyCashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +396,7 @@
 		4959566D25F594C700D68632 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W4XUH8LUQ;
 				INFOPLIST_FILE = "WyCash-SwiftTests/Info.plist";
@@ -404,6 +408,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GanNaSong.WyCash-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WyCash-SwiftTests/WyCash-SwiftTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -412,6 +418,7 @@
 		4959566E25F594C700D68632 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2W4XUH8LUQ;
 				INFOPLIST_FILE = "WyCash-SwiftTests/Info.plist";
@@ -423,6 +430,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.GanNaSong.WyCash-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WyCash-SwiftTests/WyCash-SwiftTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
